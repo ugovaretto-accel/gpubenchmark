@@ -1,0 +1,102 @@
+<!-- if run locally use: C:\tmp\bandwidth-test-data>\Users\uvaretto\AppData\Local\Google\Chrome\Application\chrome.exe --allow-file-access-from-file -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	<title>CSV Loading</title> 
+	<!-- 1. Add these JavaScript inclusions in the head of your page --> 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+	<script type="text/javascript" src="file:///C:/src/javascript/highcharts/js/highcharts.js"></script> 
+	<script type="text/javascript" src="file:///C:/src/javascript/highcharts/js/themes/gray.js"></script>
+	<!--[if IE]>
+		<script type="text/javascript" src="../js/excanvas.compiled.js"></script>
+	<![endif]--> 
+				
+	<!-- 2. Add the JavaScript to initialize the chart on document ready --> 
+	<script type="text/javascript"> 
+	$(document).ready(function() {
+	  var options = {
+			          chart: {
+					    renderTo: 'container',
+					    defaultSeriesType: 'spline',
+					    zoomType: 'xy'
+				      },
+				      credits: {
+				      	enabled: false
+				      },
+				      title: {
+					    text: 'CUDA Memory bandwidth - gtx 285'
+				      },
+				      xAxis: {
+				      	title: {
+					      text: 'bytes'
+					  	},
+					    categories: []
+					  },
+				      yAxis: {
+					    title: {
+					      text: 'GB/s'
+					    }
+				      },
+				      series: []
+			};
+			$('body').append( '<p>' );
+			$.get('device.log', function(data) {
+				var lines = data.split('\n');
+				$.each(lines, function(lineNo, line) {
+					$('body').append( line + '</br>' ); });
+				});			
+			$('body').append( '</p>' );
+			$.get('tiny.csv', function(data) {
+				// Split the lines
+				var lines = data.split('\n');
+				var seriesMap = {};
+				var categoryMap = {};
+				var key;
+				$.each(lines, function(lineNo, line) {
+					if( lineNo == 0 ) {
+						$('body').append( '<p>' + line + '</p>' );
+					} else {
+						var items = line.split(',');
+						var add = false;					
+						var mem = (parseFloat( items[ 0 ] ) / (1024*1024)).toFixed(0);
+						var name = items[ 1 ]
+						var bw = (parseFloat( items[ 2 ] ));
+						var series = {
+										data: []
+									 };
+						if( seriesMap[ name ] === undefined ) {
+							add = true;
+							key = name;
+							console.log( key );
+						} else {
+							series = options.series[ seriesMap[ name ] ] ;
+						}			 
+						series.data.push( bw );
+						if( categoryMap[ mem ] === undefined ) {
+							options.xAxis.categories.push( mem );
+							categoryMap[ mem ] = options.xAxis.categories.length - 1;
+						}		
+						if( add ) {
+							series.name = key;
+							options.series.push( series );
+							seriesMap[ key ] = options.series.length - 1;
+						}
+					}					
+ 				});
+				
+				console.log( options );
+				var chart = new Highcharts.Chart(options);
+			});
+			
+		});
+		</script> 
+		
+	</head> 
+	<body> 
+		
+		<!-- 3. Add the container --> 
+		<div id="container" style="width: 100%; height: 100%; margin: 0 auto"></div> 
+				
+	</body> 
+</html> 

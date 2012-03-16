@@ -1,0 +1,30 @@
+There is 1 device supporting CUDA
+
+Device 0: GeForce GTX 285
+  CUDA Driver Version:                           4.0
+  CUDA Runtime Version:                          4.0
+  CUDA Capability Major/Minor version number:    1.3
+  Total amount of global memory:                 2085289984 bytes
+  30 Multiprocessors
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       16384 bytes
+  Total number of registers available per block: 16384
+  Warp size:                                     32
+  Maximum number of threads per block:           512
+  Maximum sizes of each dimension of a block:    512 x 512 x 64
+  Maximum sizes of each dimension of a grid:     65535 x 65535 x 1
+  Maximum memory pitch:                          2147483647 bytes
+  Texture alignment:                             256 bytes
+  Clock rate:                                    1.476 GHz
+  Concurrent copy and execution:                 Yes
+  # of Asynchronous Copy Engines:                1
+  Run time limit on kernels:                     No
+  Integrated:                                    No
+  Support host page-locked memory mapping:       Yes
+  Compute mode:                                  Default (multiple host threads can use this device simultaneously)
+  Concurrent kernel execution:                   No
+  Device has ECC support enabled:                No
+  Device is using TCC driver mode:               No
+  Unified addressing:                            No
+  PCI bus id:                                    1
+  PCI device id:                                 0

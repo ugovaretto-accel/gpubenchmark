@@ -1,0 +1,59 @@
+There are 2 devices supporting CUDA
+
+Device0: GeForce GTX 480
+  CUDA Driver Version:                           4.0
+  CUDA Runtime Version:                          4.0
+  CUDA Capability Major/Minor version number:    2.0
+  Total amount of global memory:                 1610285056 bytes
+  Nummber of multiprocessoes:                    15
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       49152 bytes
+  Total number of registers available per block: 32768
+  Warp size:                                     32
+  Maximum number of threads per block:           1024
+  Maximum sizes of each dimension of a block:    1024 x 1024 x 64
+  Maximum sizes of each dimension of a grid:     65535 x 65535 x 65535
+  Maximum memory pitch:                          2147483647 bytes
+  Texture alignment:                             512 bytes
+  Clock rate:                                    1.401 GHz
+  Concurrent copy and execution:                 Yes
+  # of Asynchronous Copy Engines:                1
+  Run time limit on kernels:                     No
+  Integrated:                                    No
+  Support host page-locked memory mapping:       Yes
+  Compute mode:                                  Default (multiple host threads can use this device simultaneously)
+  Concurrent kernel execution:                   Yes
+  Device has ECC support enabled:                No
+  Device is using TCC driver mode:               No
+  Unified addressing:                            Yes
+  PCI bus id:                                    65
+  PCI device id:                                 0
+
+Device1: GeForce GTX 480
+  CUDA Driver Version:                           4.0
+  CUDA Runtime Version:                          4.0
+  CUDA Capability Major/Minor version number:    2.0
+  Total amount of global memory:                 1610285056 bytes
+  Nummber of multiprocessoes:                    15
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       49152 bytes
+  Total number of registers available per block: 32768
+  Warp size:                                     32
+  Maximum number of threads per block:           1024
+  Maximum sizes of each dimension of a block:    1024 x 1024 x 64
+  Maximum sizes of each dimension of a grid:     65535 x 65535 x 65535
+  Maximum memory pitch:                          2147483647 bytes
+  Texture alignment:                             512 bytes
+  Clock rate:                                    1.401 GHz
+  Concurrent copy and execution:                 Yes
+  # of Asynchronous Copy Engines:                1
+  Run time limit on kernels:                     No
+  Integrated:                                    No
+  Support host page-locked memory mapping:       Yes
+  Compute mode:                                  Default (multiple host threads can use this device simultaneously)
+  Concurrent kernel execution:                   Yes
+  Device has ECC support enabled:                No
+  Device is using TCC driver mode:               No
+  Unified addressing:                            Yes
+  PCI bus id:                                    66
+  PCI device id:                                 0

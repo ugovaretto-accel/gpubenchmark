@@ -1,0 +1,153 @@
+<!-- if run locally use: C:\tmp\bandwidth-test-data>\Users\uvaretto\AppData\Local\Google\Chrome\Application\chrome.exe --allow-file-access-from-files -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+	<title>CSV Loading</title> 
+	<!-- 1. Add these JavaScript inclusions in the head of your page --> 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+	<script type="text/javascript" src="file:///C:/src/javascript/highcharts/js/highcharts.js"></script> 
+	<script type="text/javascript" src="file:///C:/src/javascript/highcharts/js/themes/gray.js"></script>
+	<!--[if IE]>
+		<script type="text/javascript" src="../js/excanvas.compiled.js"></script>
+	<![endif]--> 
+	<style type="text/css">
+		#info {
+			font-family: serif;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 500;
+			font-size: medium;
+			line-height: 100%;
+			word-spacing: normal;
+			letter-spacing: normal;
+			text-decoration: none;
+			/*text-transform: lowercase;*/
+			text-align: left;
+			text-indent: 0ex;
+		}
+		#info > table {
+			margin: 10px;
+			border: 1px solid black;
+			padding: 5px 5px 5px 5px;
+		}
+		.left   {
+			background-color: #dfdfaf;
+			font-style: italic;
+		}
+
+	</style>			
+	<!-- 2. Add the JavaScript to initialize the chart on document ready --> 
+	<script type="text/javascript">
+	
+	function log2( v ) {
+		if( !v ) return 0;
+		return 1 + log2( v >> 1 ); 
+	}
+	 
+	$(document).ready(function() {
+	  var options = {
+			          chart: {
+					    renderTo: 'container',
+					    defaultSeriesType: 'spline',
+					    zoomType: 'xy'
+				      },
+				      credits: {
+				      	enabled: false
+				      },
+				      title: {
+					    text: 'CUDA Memory bandwidth - tesla C10XX - linux'
+				      },
+				      xAxis: {
+				      	title: {
+					      text: 'log2(bytes)'
+					  	},
+					    categories: []
+					  },
+				      yAxis: {
+					    title: {
+					      text: 'kB/s'
+					    },
+					    min: 0
+				      },
+				      series: []
+			};		
+			$.get('device-teslac1xx.log', function(data) {
+				var lines = data.split('\n');
+				$('#info').append('<table>');
+				var table = '#info table';
+				$.each(lines, function(lineNo, line) {
+						var items = line.split( ':' );
+						if( items.length > 1 ) {
+							var row = table + ' #' + lineNo;
+							var leftCell = row + ' .left';
+							var rightCell = row + ' .right';
+							$( table ).append( '<tr id=' + lineNo + '>' );
+					 		$( row ).append( '<td class="left">' );
+							$( leftCell ).append( items[ 0 ].trim() );
+							$( row ).append( '<td class="right">' );
+							$( rightCell ).append( items[ 1 ].trim() );
+						}
+					 });							
+				});
+			$.get('bandwidth-stat-teslac10xx.csv', function(data) {
+				// Split the lines
+				var lines = data.split('\n');
+				if( lines == null ) alert("!");
+				var seriesMap = {};
+				var categoryMap = {};
+				var key;
+				$.each(lines, function(lineNo, line) {
+					if( lineNo == 0 ) {
+						$('#info').prepend( '<p>' + line + '</p>' );
+					} else {
+						var items = line.split(',');
+						if( items.length === 0 ) console.log( 'empty line at ' + lineNo );
+						var add = false;					
+						var mem = log2( parseInt( items[ 0 ] ) );//.toFixed( 0 );//(parseFloat( items[ 0 ] ) / (1024*1024)).toFixed(0);
+						var name = items[ 1 ]
+						var bw = parseFloat( items[ 2 ] ) * 1024 * 1024;//  (parseFloat( items[ 2 ] ));
+						var series = {
+										data: []
+									 };
+						if( mem !== undefined &&
+						    mem !== NaN &&
+						    name !== undefined &&
+						    bw !== undefined &&
+						    bw !== NaN ) {
+							if( seriesMap[ name ] === undefined ) {
+								add = true;
+								key = name;
+								if( key === undefined ) {
+									console.log( 'undefined name at ' + lineNo + '|' + line );
+								}
+							} else {
+								series = options.series[ seriesMap[ name ] ] ;
+							}			 
+							series.data.push( bw );
+							if( categoryMap[ mem ] === undefined ) {
+								options.xAxis.categories.push( mem );
+								categoryMap[ mem ] = options.xAxis.categories.length - 1;
+							}		
+							if( add ) {
+								series.name = key;
+								options.series.push( series );
+								seriesMap[ key ] = options.series.length - 1;
+							}
+						}	
+					}					
+ 				});
+				
+				var chart = new Highcharts.Chart(options);
+			});
+			
+		});
+		</script> 
+		
+	</head> 
+	<body> 		
+		<!-- 3. Add the container --> 
+		<div id="container" style="width: 100%; height: 800px; margin: 0 auto"></div> 
+		<div id="info"></div>		
+	</body> 
+</html> 

@@ -1,0 +1,361 @@
+Max page lockable size: 8192MB
+4,Device to Device,7.36806e-05,0.05056
+4,Host to Device,0.000360419,0.010336
+4,Device to host,0.000257556,0.014464
+4,Host to Device - cudaHostAllocDefault,0.000247692,0.01504
+4,Device to Host - cudaHostAllocDefault,0.000351708,0.010592
+4,Host to Device - cudaHostAllocPortable,0.000246643,0.015104
+4,Device to Host - cudaHostAllocPortable,0.000348549,0.010688
+4,Host to Device - cudaHostAllocMapped,0.000258701,0.0144
+4,Device to Host - cudaHostAllocMapped,0.000354925,0.010496
+4,Device(on host) to Device - cudaHostAllocMapped,0.000261021,0.014272
+4,Device to Device(on host) - cudaHostAllocMapped,0.000364938,0.010208
+4,Host to Device - cudaHostAllocWriteCombined,0.000167504,0.02224
+4,Device to Host - cudaHostAllocWriteCombined,0.000337436,0.01104
+4,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.000182469,0.020416
+4,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.000358201,0.0104
+8,Device to Device,0.000179376,0.041536
+8,Host to Device,0.000834518,0.008928
+8,Device to host,0.000507256,0.014688
+8,Host to Device - cudaHostAllocDefault,0.000523215,0.01424
+8,Device to Host - cudaHostAllocDefault,0.000729877,0.010208
+8,Host to Device - cudaHostAllocPortable,0.000509476,0.014624
+8,Device to Host - cudaHostAllocPortable,0.000718613,0.010368
+8,Host to Device - cudaHostAllocMapped,0.000512843,0.014528
+8,Device to Host - cudaHostAllocMapped,0.000716402,0.0104
+8,Device(on host) to Device - cudaHostAllocMapped,0.000520874,0.014304
+8,Device to Device(on host) - cudaHostAllocMapped,0.000732172,0.010176
+8,Host to Device - cudaHostAllocWriteCombined,0.000275866,0.027008
+8,Device to Host - cudaHostAllocWriteCombined,0.000701297,0.010624
+8,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.000312944,0.023808
+8,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.000751067,0.00992
+16,Device to Device,0.00043683,0.034112
+16,Host to Device,0.00169331,0.0088
+16,Device to host,0.00102343,0.01456
+16,Host to Device - cudaHostAllocDefault,0.00105592,0.014112
+16,Device to Host - cudaHostAllocDefault,0.00145975,0.010208
+16,Host to Device - cudaHostAllocPortable,0.00103251,0.014432
+16,Device to Host - cudaHostAllocPortable,0.00145519,0.01024
+16,Host to Device - cudaHostAllocMapped,0.00104175,0.014304
+16,Device to Host - cudaHostAllocMapped,0.00166308,0.00896
+16,Device(on host) to Device - cudaHostAllocMapped,0.00105353,0.014144
+16,Device to Device(on host) - cudaHostAllocMapped,0.00146896,0.010144
+16,Host to Device - cudaHostAllocWriteCombined,0.000698143,0.021344
+16,Device to Host - cudaHostAllocWriteCombined,0.00140683,0.010592
+16,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.000670016,0.02224
+16,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.00145519,0.01024
+32,Device to Device,0.000881934,0.033792
+32,Host to Device,0.00344934,0.00864
+32,Device to host,0.00204686,0.01456
+32,Host to Device - cudaHostAllocDefault,0.00207885,0.014336
+32,Device to Host - cudaHostAllocDefault,0.00289231,0.010304
+32,Host to Device - cudaHostAllocPortable,0.00205137,0.014528
+32,Device to Host - cudaHostAllocPortable,0.00289231,0.010304
+32,Host to Device - cudaHostAllocMapped,0.0020835,0.014304
+32,Device to Host - cudaHostAllocMapped,0.00288335,0.010336
+32,Device(on host) to Device - cudaHostAllocMapped,0.00201585,0.014784
+32,Device to Device(on host) - cudaHostAllocMapped,0.00338663,0.0088
+32,Host to Device - cudaHostAllocWriteCombined,0.000871209,0.034208
+32,Device to Host - cudaHostAllocWriteCombined,0.00274726,0.010848
+32,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.00144615,0.020608
+32,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.00291038,0.01024
+64,Device to Device,0.00174405,0.034176
+64,Host to Device,0.00692433,0.008608
+64,Device to host,0.00422369,0.014112
+64,Host to Device - cudaHostAllocDefault,0.00415769,0.014336
+64,Device to Host - cudaHostAllocDefault,0.00562733,0.010592
+64,Host to Device - cudaHostAllocPortable,0.00405805,0.014688
+64,Device to Host - cudaHostAllocPortable,0.00535243,0.011136
+64,Host to Device - cudaHostAllocMapped,0.0045878,0.012992
+64,Device to Host - cudaHostAllocMapped,0.00557678,0.010688
+64,Device(on host) to Device - cudaHostAllocMapped,0.00421413,0.014144
+64,Device to Device(on host) - cudaHostAllocMapped,0.0056788,0.010496
+64,Host to Device - cudaHostAllocWriteCombined,0.00228265,0.026112
+64,Device to Host - cudaHostAllocWriteCombined,0.00543045,0.010976
+64,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0028968,0.020576
+64,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.00580263,0.010272
+128,Device to Device,0.00359931,0.03312
+128,Host to Device,0.0137465,0.008672
+128,Device to host,0.0080634,0.014784
+128,Host to Device - cudaHostAllocDefault,0.00840923,0.014176
+128,Device to Host - cudaHostAllocDefault,0.0112547,0.010592
+128,Host to Device - cudaHostAllocPortable,0.00824179,0.014464
+128,Device to Host - cudaHostAllocPortable,0.0113576,0.010496
+128,Host to Device - cudaHostAllocMapped,0.00833398,0.014304
+128,Device to Host - cudaHostAllocMapped,0.0114273,0.010432
+128,Device(on host) to Device - cudaHostAllocMapped,0.00829686,0.014368
+128,Device to Device(on host) - cudaHostAllocMapped,0.0116053,0.010272
+128,Host to Device - cudaHostAllocWriteCombined,0.00533709,0.022336
+128,Device to Host - cudaHostAllocWriteCombined,0.0106742,0.011168
+128,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.00575779,0.020704
+128,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0117147,0.010176
+256,Device to Device,0.00721257,0.033056
+256,Host to Device,0.0273918,0.008704
+256,Device to host,0.0156197,0.015264
+256,Host to Device - cudaHostAllocDefault,0.0164836,0.014464
+256,Device to Host - cudaHostAllocDefault,0.0226461,0.010528
+256,Host to Device - cudaHostAllocPortable,0.0163032,0.014624
+256,Device to Host - cudaHostAllocPortable,0.0225093,0.010592
+256,Host to Device - cudaHostAllocMapped,0.0167053,0.014272
+256,Device to Host - cudaHostAllocMapped,0.0227152,0.010496
+256,Device(on host) to Device - cudaHostAllocMapped,0.0168185,0.014176
+256,Device to Device(on host) - cudaHostAllocMapped,0.0231384,0.010304
+256,Host to Device - cudaHostAllocWriteCombined,0.00789256,0.030208
+256,Device to Host - cudaHostAllocWriteCombined,0.0217218,0.010976
+256,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0115334,0.020672
+256,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0233561,0.010208
+512,Device to Device,0.0142051,0.033568
+512,Host to Device,0.054186,0.0088
+512,Device to host,0.0316373,0.015072
+512,Host to Device - cudaHostAllocDefault,0.0335612,0.014208
+512,Device to Host - cudaHostAllocDefault,0.0454304,0.010496
+512,Host to Device - cudaHostAllocPortable,0.0325353,0.014656
+512,Device to Host - cudaHostAllocPortable,0.0454304,0.010496
+512,Host to Device - cudaHostAllocMapped,0.0327498,0.01456
+512,Device to Host - cudaHostAllocMapped,0.0446143,0.010688
+512,Device(on host) to Device - cudaHostAllocMapped,0.0334107,0.014272
+512,Device to Device(on host) - cudaHostAllocMapped,0.0464211,0.010272
+512,Host to Device - cudaHostAllocWriteCombined,0.0215335,0.022144
+512,Device to Host - cudaHostAllocWriteCombined,0.0422129,0.011296
+512,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0215646,0.022112
+512,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0459912,0.010368
+1024,Device to Device,0.0289062,0.032992
+1024,Host to Device,0.106818,0.008928
+1024,Device to host,0.0610703,0.015616
+1024,Host to Device - cudaHostAllocDefault,0.0659343,0.014464
+1024,Device to Host - cudaHostAllocDefault,0.0903101,0.01056
+1024,Host to Device - cudaHostAllocPortable,0.0632746,0.015072
+1024,Device to Host - cudaHostAllocPortable,0.0894965,0.010656
+1024,Host to Device - cudaHostAllocMapped,0.065356,0.014592
+1024,Device to Host - cudaHostAllocMapped,0.0884342,0.010784
+1024,Device(on host) to Device - cudaHostAllocMapped,0.0663749,0.014368
+1024,Device to Device(on host) - cudaHostAllocMapped,0.0925538,0.010304
+1024,Host to Device - cudaHostAllocWriteCombined,0.0443487,0.021504
+1024,Device to Host - cudaHostAllocWriteCombined,0.0866347,0.011008
+1024,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0411634,0.023168
+1024,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0908607,0.010496
+2048,Device to Device,0.056929,0.033504
+2048,Host to Device,0.199347,0.009568
+2048,Device to host,0.110175,0.017312
+2048,Host to Device - cudaHostAllocDefault,0.130426,0.014624
+2048,Device to Host - cudaHostAllocDefault,0.180074,0.010592
+2048,Host to Device - cudaHostAllocPortable,0.12736,0.014976
+2048,Device to Host - cudaHostAllocPortable,0.177924,0.01072
+2048,Host to Device - cudaHostAllocMapped,0.129294,0.014752
+2048,Device to Host - cudaHostAllocMapped,0.175308,0.01088
+2048,Device(on host) to Device - cudaHostAllocMapped,0.131578,0.014496
+2048,Device to Device(on host) - cudaHostAllocMapped,0.177924,0.01072
+2048,Host to Device - cudaHostAllocWriteCombined,0.0866347,0.022016
+2048,Device to Host - cudaHostAllocWriteCombined,0.174283,0.010944
+2048,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.0873968,0.021824
+2048,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.180074,0.010592
+4096,Device to Device,0.0998403,0.038208
+4096,Host to Device,0.36793,0.010368
+4096,Device to host,0.206602,0.018464
+4096,Host to Device - cudaHostAllocDefault,0.252562,0.015104
+4096,Device to Host - cudaHostAllocDefault,0.345534,0.01104
+4096,Host to Device - cudaHostAllocPortable,0.25044,0.015232
+4096,Device to Host - cudaHostAllocPortable,0.341574,0.011168
+4096,Host to Device - cudaHostAllocMapped,0.253098,0.015072
+4096,Device to Host - cudaHostAllocMapped,0.339628,0.011232
+4096,Device(on host) to Device - cudaHostAllocMapped,0.254721,0.014976
+4096,Device to Device(on host) - cudaHostAllocMapped,0.405474,0.009408
+4096,Host to Device - cudaHostAllocWriteCombined,0.162632,0.023456
+4096,Device to Host - cudaHostAllocWriteCombined,0.342555,0.011136
+4096,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.151089,0.025248
+4096,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.36124,0.01056
+8192,Device to Device,0.221785,0.0344
+8192,Host to Device,0.635783,0.012
+8192,Device to host,0.33022,0.023104
+8192,Host to Device - cudaHostAllocDefault,0.475885,0.016032
+8192,Device to Host - cudaHostAllocDefault,0.654996,0.011648
+8192,Host to Device - cudaHostAllocPortable,0.469328,0.016256
+8192,Device to Host - cudaHostAllocPortable,0.651417,0.011712
+8192,Host to Device - cudaHostAllocMapped,0.470254,0.016224
+8192,Device to Host - cudaHostAllocMapped,0.642638,0.011872
+8192,Device(on host) to Device - cudaHostAllocMapped,0.430358,0.017728
+8192,Device to Device(on host) - cudaHostAllocMapped,0.766619,0.009952
+8192,Host to Device - cudaHostAllocWriteCombined,0.211177,0.036128
+8192,Device to Host - cudaHostAllocWriteCombined,0.619269,0.01232
+8192,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.292898,0.026048
+8192,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.665974,0.011456
+16384,Device to Device,0.447734,0.03408
+16384,Host to Device,0.934975,0.01632
+16384,Device to host,0.466116,0.032736
+16384,Host to Device - cudaHostAllocDefault,0.840983,0.018144
+16384,Device to Host - cudaHostAllocDefault,1.18322,0.012896
+16384,Host to Device - cudaHostAllocPortable,0.832177,0.018336
+16384,Device to Host - cudaHostAllocPortable,0.848465,0.017984
+16384,Host to Device - cudaHostAllocMapped,0.771581,0.019776
+16384,Device to Host - cudaHostAllocMapped,0.785564,0.019424
+16384,Device(on host) to Device - cudaHostAllocMapped,0.849977,0.017952
+16384,Device to Device(on host) - cudaHostAllocMapped,1.18616,0.012864
+16384,Host to Device - cudaHostAllocWriteCombined,0.569698,0.026784
+16384,Device to Host - cudaHostAllocWriteCombined,1.15737,0.013184
+16384,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,0.581509,0.02624
+16384,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,1.02767,0.014848
+32768,Device to Device,0.905674,0.033696
+32768,Host to Device,1.29399,0.023584
+32768,Device to host,0.643071,0.047456
+32768,Host to Device - cudaHostAllocDefault,1.39835,0.021824
+32768,Device to Host - cudaHostAllocDefault,1.99513,0.015296
+32768,Host to Device - cudaHostAllocPortable,1.2665,0.024096
+32768,Device to Host - cudaHostAllocPortable,1.44496,0.02112
+32768,Host to Device - cudaHostAllocMapped,1.38214,0.02208
+32768,Device to Host - cudaHostAllocMapped,2.00352,0.015232
+32768,Device(on host) to Device - cudaHostAllocMapped,1.40868,0.021664
+32768,Device to Device(on host) - cudaHostAllocMapped,2.03342,0.015008
+32768,Host to Device - cudaHostAllocWriteCombined,0.907397,0.033632
+32768,Device to Host - cudaHostAllocWriteCombined,1.93051,0.015808
+32768,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,1.0987,0.027776
+32768,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,2.0205,0.015104
+65536,Device to Device,1.83399,0.03328
+65536,Host to Device,1.58024,0.038624
+65536,Device to host,0.796055,0.076672
+65536,Host to Device - cudaHostAllocDefault,2.06871,0.029504
+65536,Device to Host - cudaHostAllocDefault,2.99898,0.020352
+65536,Host to Device - cudaHostAllocPortable,2.03126,0.030048
+65536,Device to Host - cudaHostAllocPortable,2.99898,0.020352
+65536,Host to Device - cudaHostAllocMapped,2.06423,0.029568
+65536,Device to Host - cudaHostAllocMapped,3.02274,0.020192
+65536,Device(on host) to Device - cudaHostAllocMapped,2.07772,0.029376
+65536,Device to Device(on host) - cudaHostAllocMapped,1.92079,0.031776
+65536,Host to Device - cudaHostAllocWriteCombined,1.87178,0.032608
+65536,Device to Host - cudaHostAllocWriteCombined,2.96172,0.020608
+65536,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,1.67311,0.03648
+65536,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,3.05665,0.019968
+131072,Device to Device,3.55849,0.034304
+131072,Host to Device,1.70527,0.071584
+131072,Device to host,1.05204,0.116032
+131072,Host to Device - cudaHostAllocDefault,2.67136,0.045696
+131072,Device to Host - cudaHostAllocDefault,4.01125,0.030432
+131072,Host to Device - cudaHostAllocPortable,2.6902,0.045376
+131072,Device to Host - cudaHostAllocPortable,2.44063,0.050016
+131072,Host to Device - cudaHostAllocMapped,2.54144,0.048032
+131072,Device to Host - cudaHostAllocMapped,2.29386,0.053216
+131072,Device(on host) to Device - cudaHostAllocMapped,2.60745,0.046816
+131072,Device to Device(on host) - cudaHostAllocMapped,3.0037,0.04064
+131072,Host to Device - cudaHostAllocWriteCombined,1.97858,0.061696
+131072,Device to Host - cudaHostAllocWriteCombined,3.96538,0.030784
+131072,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,2.8132,0.043392
+131072,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,2.81527,0.04336
+262144,Device to Device,7.11697,0.034304
+262144,Host to Device,1.86903,0.130624
+262144,Device to host,1.0946,0.22304
+262144,Host to Device - cudaHostAllocDefault,3.20698,0.076128
+262144,Device to Host - cudaHostAllocDefault,4.20121,0.058112
+262144,Host to Device - cudaHostAllocPortable,3.15264,0.07744
+262144,Device to Host - cudaHostAllocPortable,4.90006,0.049824
+262144,Host to Device - cudaHostAllocMapped,2.89871,0.084224
+262144,Device to Host - cudaHostAllocMapped,2.73064,0.089408
+262144,Device(on host) to Device - cudaHostAllocMapped,3.15917,0.07728
+262144,Device to Device(on host) - cudaHostAllocMapped,2.89211,0.084416
+262144,Host to Device - cudaHostAllocWriteCombined,3.0591,0.079808
+262144,Device to Host - cudaHostAllocWriteCombined,4.87813,0.050048
+262144,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,3.70179,0.065952
+262144,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,4.94452,0.049376
+524288,Device to Device,12.6734,0.038528
+524288,Host to Device,1.97244,0.247552
+524288,Device to host,1.35598,0.360096
+524288,Host to Device - cudaHostAllocDefault,3.41895,0.142816
+524288,Device to Host - cudaHostAllocDefault,2.9646,0.164704
+524288,Host to Device - cudaHostAllocPortable,3.51261,0.139008
+524288,Device to Host - cudaHostAllocPortable,3.83772,0.127232
+524288,Host to Device - cudaHostAllocMapped,3.55517,0.137344
+524288,Device to Host - cudaHostAllocMapped,5.46714,0.089312
+524288,Device(on host) to Device - cudaHostAllocMapped,3.43125,0.142304
+524288,Device to Device(on host) - cudaHostAllocMapped,2.85318,0.171136
+524288,Host to Device - cudaHostAllocWriteCombined,3.97468,0.122848
+524288,Device to Host - cudaHostAllocWriteCombined,3.22596,0.15136
+524288,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,3.9035,0.125088
+524288,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,5.50263,0.088736
+1048576,Device to Device,18.9904,0.051424
+1048576,Host to Device,1.99266,0.49008
+1048576,Device to host,1.45641,0.670528
+1048576,Host to Device - cudaHostAllocDefault,3.89007,0.25104
+1048576,Device to Host - cudaHostAllocDefault,5.81287,0.168
+1048576,Host to Device - cudaHostAllocPortable,3.906,0.250016
+1048576,Device to Host - cudaHostAllocPortable,5.81066,0.168064
+1048576,Host to Device - cudaHostAllocMapped,3.79572,0.25728
+1048576,Device to Host - cudaHostAllocMapped,3.69955,0.263968
+1048576,Device(on host) to Device - cudaHostAllocMapped,3.91101,0.249696
+1048576,Device to Device(on host) - cudaHostAllocMapped,5.82285,0.167712
+1048576,Host to Device - cudaHostAllocWriteCombined,4.49913,0.217056
+1048576,Device to Host - cudaHostAllocWriteCombined,3.09195,0.31584
+1048576,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,4.14754,0.235456
+1048576,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,3.60047,0.271232
+2097152,Device to Device,27.0067,0.07232
+2097152,Host to Device,2.2573,0.865248
+2097152,Device to host,1.72396,1.13293
+2097152,Host to Device - cudaHostAllocDefault,3.88462,0.502784
+2097152,Device to Host - cudaHostAllocDefault,5.91311,0.330304
+2097152,Host to Device - cudaHostAllocPortable,3.92332,0.497824
+2097152,Device to Host - cudaHostAllocPortable,5.12341,0.381216
+2097152,Host to Device - cudaHostAllocMapped,3.92055,0.498176
+2097152,Device to Host - cudaHostAllocMapped,6.00562,0.325216
+2097152,Device(on host) to Device - cudaHostAllocMapped,3.86396,0.505472
+2097152,Device to Device(on host) - cudaHostAllocMapped,4.48557,0.435424
+2097152,Host to Device - cudaHostAllocWriteCombined,4.94092,0.395296
+2097152,Device to Host - cudaHostAllocWriteCombined,5.32593,0.36672
+2097152,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,4.99469,0.39104
+2097152,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,3.03869,0.642752
+4194304,Device to Device,37.0359,0.105472
+4194304,Host to Device,2.4952,1.5655
+4194304,Device to host,1.92789,2.02618
+4194304,Host to Device - cudaHostAllocDefault,4.11108,0.950176
+4194304,Device to Host - cudaHostAllocDefault,3.86433,1.01085
+4194304,Host to Device - cudaHostAllocPortable,4.02846,0.969664
+4194304,Device to Host - cudaHostAllocPortable,6.10474,0.639872
+4194304,Host to Device - cudaHostAllocMapped,4.01059,0.973984
+4194304,Device to Host - cudaHostAllocMapped,5.61449,0.695744
+4194304,Device(on host) to Device - cudaHostAllocMapped,3.94794,0.98944
+4194304,Device to Device(on host) - cudaHostAllocMapped,4.5126,0.865632
+4194304,Host to Device - cudaHostAllocWriteCombined,5.24087,0.745344
+4194304,Device to Host - cudaHostAllocWriteCombined,4.11136,0.950112
+4194304,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,5.20667,0.75024
+4194304,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,5.80651,0.672736
+8388608,Device to Device,45.8652,0.170336
+8388608,Host to Device,2.3382,3.34125
+8388608,Device to host,2.03692,3.83546
+8388608,Host to Device - cudaHostAllocDefault,4.09948,1.90573
+8388608,Device to Host - cudaHostAllocDefault,6.15258,1.26979
+8388608,Host to Device - cudaHostAllocPortable,4.57098,1.70915
+8388608,Device to Host - cudaHostAllocPortable,5.56382,1.40416
+8388608,Host to Device - cudaHostAllocMapped,4.63098,1.68701
+8388608,Device to Host - cudaHostAllocMapped,4.04093,1.93334
+8388608,Device(on host) to Device - cudaHostAllocMapped,4.52867,1.72512
+8388608,Device to Device(on host) - cudaHostAllocMapped,4.49184,1.73926
+8388608,Host to Device - cudaHostAllocWriteCombined,5.29624,1.4751
+8388608,Device to Host - cudaHostAllocWriteCombined,5.2654,1.48374
+8388608,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,5.25452,1.48682
+8388608,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,6.15724,1.26883
+16777216,Device to Device,50.5677,0.308992
+16777216,Host to Device,2.41631,6.46646
+16777216,Device to host,2.10761,7.4136
+16777216,Host to Device - cudaHostAllocDefault,4.86903,3.20906
+16777216,Device to Host - cudaHostAllocDefault,5.52479,2.82816
+16777216,Host to Device - cudaHostAllocPortable,4.84627,3.22413
+16777216,Device to Host - cudaHostAllocPortable,5.7724,2.70685
+16777216,Host to Device - cudaHostAllocMapped,4.78627,3.26454
+16777216,Device to Host - cudaHostAllocMapped,4.88491,3.19862
+16777216,Device(on host) to Device - cudaHostAllocMapped,4.87857,3.20278
+16777216,Device to Device(on host) - cudaHostAllocMapped,4.61487,3.38579
+16777216,Host to Device - cudaHostAllocWriteCombined,5.33512,2.9287
+16777216,Device to Host - cudaHostAllocWriteCombined,5.52698,2.82704
+16777216,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,5.33326,2.92973
+16777216,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,4.58433,3.40835
+33554432,Device to Device,54.1482,0.57712
+33554432,Host to Device,2.488,12.5603
+33554432,Device to host,2.11167,14.7987
+33554432,Host to Device - cudaHostAllocDefault,5.15366,6.06365
+33554432,Device to Host - cudaHostAllocDefault,4.89294,6.38675
+33554432,Host to Device - cudaHostAllocPortable,5.03596,6.20538
+33554432,Device to Host - cudaHostAllocPortable,4.75333,6.57434
+33554432,Host to Device - cudaHostAllocMapped,5.15353,6.06381
+33554432,Device to Host - cudaHostAllocMapped,5.05713,6.17939
+33554432,Device(on host) to Device - cudaHostAllocMapped,5.07079,6.16275
+33554432,Device to Device(on host) - cudaHostAllocMapped,4.99255,6.25933
+33554432,Host to Device - cudaHostAllocWriteCombined,5.36034,5.82986
+33554432,Device to Host - cudaHostAllocWriteCombined,4.98363,6.27053
+33554432,Device(on host) to Device - cudaHostAllocMapped | cudaHostAllocWriteCombined,5.34005,5.852
+33554432,Device to Device(on host) - cudaHostAllocMapped | cudaHostAllocWriteCombined,4.60031,6.79302
