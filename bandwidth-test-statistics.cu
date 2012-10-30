@@ -83,14 +83,13 @@ int main(int argc, char** argv ) {
 	int    dev_id    = 0;
 			
 	if( argc < 5 ) {
-		std::cout << "usage: " << argv[ 0 ] << " <min num elements>  <max num elements> <step> <op=add|mul> [device id]\n";
+		std::cout << "usage: " << argv[ 0 ] << " <min num elements>  <max num elements> <step> [device id]\n";
 		return 0;
 	} else {		
 		beginSize = strTo< size_t >( argv[ 1 ] );
 		endSize   = strTo< size_t >( argv[ 2 ] );
 		step 	  = strTo< size_t >( argv[ 3 ] );
-		mul		  = argv[ 4 ] == std::string( "mul" ) ? true : false; 
-		if( argc > 5 ) dev_id = strTo< int >( argv[ 5 ] ); 
+		if( argc > 4 ) dev_id = strTo< int >( argv[ 4 ] ); 
 	}
 
 	if( cudaSetDevice( dev_id ) != cudaSuccess ) {
@@ -100,11 +99,12 @@ int main(int argc, char** argv ) {
 
 	cudaSetDeviceFlags( cudaDeviceMapHost );
 	
-	size_t pll = findPow2PageLockedLimit( 1024 * 1024 * 1024 );
-	//pll = searchPageLockedLimit( pll, 2 * pll );	
+        #if 0
+	//size_t pll = findPow2PageLockedLimit( 1024 * 1024 * 1024 );
+	pll = searchPageLockedLimit( pll, 2 * pll );	
 	std::cout <<  "Max power of two page-lockable size (<= 1GB): " 
 	          <<  double( pll ) / ( 1024 * 1024 ) << "MB" << std::endl;
-		
+	#endif	
 	
 	cudaEventCreate( &start );
 	cudaEventCreate( &stop  );
@@ -216,38 +216,39 @@ int main(int argc, char** argv ) {
 			cudaFreeHost( host );
 		}
 
-		// #if CUDART_VERSION >= 4000
-		// //
-		// {
-		// 	real_t *dev, *mapped_host;
-		// 	cudaMalloc( &dev, SIZE );
-		// 	std::vector< real_t > host( NUM_ELEMENTS );	
+		#if CUDART_VERSION >= 4000
+		//
+		{
+                        float elapsed = float();
+		 	real_t *dev, *mapped_host;
+		 	cudaMalloc( &dev, SIZE );
+		 	std::vector< real_t > host( NUM_ELEMENTS );	
 
-		// 	const cudaError_t e = cudaHostRegister( &host[ 0 ], SIZE, cudaHostAllocMapped );
-		// 	if( e != cudaSuccess ) {
-		// 		std::cerr << "Error - cudaHostRegister - mapped" << std::endl;
-		// 		return 1;
-		// 	}
-		// 	cudaHostGetDevicePointer( &mapped_host, &host[ 0 ], 0 /*has to be zero "for now" */ );
+		 	const cudaError_t e = cudaHostRegister( &host[ 0 ], SIZE, cudaHostAllocMapped );
+		 	if( e != cudaSuccess ) {
+		 		std::cerr << "Error - cudaHostRegister - mapped" << std::endl;
+		 		return 1;
+		 	}
+		 	cudaHostGetDevicePointer( &mapped_host, &host[ 0 ], 0 /*has to be zero "for now" */ );
 			
-		// 	cudaEventRecord( start );
-		// 		cudaMemcpy( dev, mapped_host, SIZE, cudaMemcpyDeviceToDevice );
-		// 	cudaEventRecord( stop );
-	 	// 	cudaEventSynchronize( stop );
-	 	// 		cudaEventElapsedTime( &elapsed, start, stop );
-		// 	std::cout << "\nHost to device - cudaHostRegister - mapped: " << GBs( NUM_ELEMENTS, elapsed ) << std::endl;	
+		 	cudaEventRecord( start );
+		 		cudaMemcpy( dev, mapped_host, SIZE, cudaMemcpyDeviceToDevice );
+		 	cudaEventRecord( stop );
+	 	 	cudaEventSynchronize( stop );
+	 	 		cudaEventElapsedTime( &elapsed, start, stop );
+		 	std::cout << "\nHost to device - cudaHostRegister - mapped: " << GBs( NUM_ELEMENTS, elapsed ) << std::endl;	
 
-		// 	cudaEventRecord( start );
-		// 		cudaMemcpy( &host[ 0 ], dev, SIZE, cudaMemcpyDeviceToHost );
-		// 	cudaEventRecord( stop );
-	 	// 		cudaEventSynchronize( stop );
-	 	// 		cudaEventElapsedTime( &elapsed, start, stop );
-		// 	std::cout << "\nDevice to host - cudaHostRegister - mapped: " << GBs( NUM_ELEMENTS, elapsed ) << std::endl;	
+		 	cudaEventRecord( start );
+		 		cudaMemcpy( &host[ 0 ], dev, SIZE, cudaMemcpyDeviceToHost );
+		 	cudaEventRecord( stop );
+	 	 		cudaEventSynchronize( stop );
+	 	 		cudaEventElapsedTime( &elapsed, start, stop );
+		 	std::cout << "\nDevice to host - cudaHostRegister - mapped: " << GBs( NUM_ELEMENTS, elapsed ) << std::endl;	
 
-		// 	cudaFree( dev );
-		// 	cudaHostUnregister( &host[ 0 ] );
-		// }
-		// #endif
+		 	cudaFree( dev );
+		 	cudaHostUnregister( &host[ 0 ] );
+		 }
+		 #endif
 	}
 
 	return 0;
