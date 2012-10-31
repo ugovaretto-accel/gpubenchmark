@@ -82,7 +82,7 @@ int main(int argc, char** argv ) {
 	bool   mul       = false;
 	int    dev_id    = 0;
 			
-	if( argc < 5 ) {
+	if( argc < 4 ) {
 		std::cout << "usage: " << argv[ 0 ] << " <min num elements>  <max num elements> <step> [device id]\n";
 		return 0;
 	} else {		
